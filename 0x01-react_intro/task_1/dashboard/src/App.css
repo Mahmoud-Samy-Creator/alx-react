@@ -1,0 +1,19 @@
+.App-header {
+  display: flex;
+  align-items: center;
+  position: relative;
+}
+.App-header h1 {
+  color: red;
+  position: absolute;
+  left: 50%;
+}
+.App-body {
+  border-top: 4px solid red;
+  border-bottom: 4px solid red;
+  text-align: left;
+  height: 450px;
+}
+.App-footer {
+  text-align: center;
+}
