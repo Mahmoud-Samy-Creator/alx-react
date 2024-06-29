@@ -1,12 +1,12 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
 import Notifications from './Notifications';
-import Root from './Root'; // Import the Root component
+import App from './App'
 
 // Render the Root component with App inside it
 ReactDOM.render(
 	<React.StrictMode>
-		<Root />
+		<App />
 	</React.StrictMode>,
 	document.getElementById('root')
 );
