@@ -32,10 +32,13 @@ module.exports = {
                 ],
             },
         ],
-},
-    plugins: [
-        new HtmlWebpackPlugin({
-            template: '../dist/index.html',
-        }),
-    ],
+    },
+    resolve: {
+        extentions: ['.js', '.jsx']
+    },
+        plugins: [
+            new HtmlWebpackPlugin({
+                template: '../dist/index.html',
+            }),
+        ],
 };
