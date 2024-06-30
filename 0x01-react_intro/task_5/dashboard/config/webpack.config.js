@@ -5,7 +5,7 @@ module.exports = {
     entry: path.join(__dirname, "../src/index.js"),
 
     output: {
-        path:path.resolve(__dirname, '../dist'),
+        path: path.resolve(__dirname, '../dist'),
         filename: 'bundle.js'
     },
 
@@ -33,10 +33,43 @@ module.exports = {
                 test: /\.css$/,
                 use: ['style-loader', 'css-loader'],
             },
-            ]
-        },
+            {
+                test: /\.(png|jpe?g|gif|svg)$/i,
+                use: [
+                    {
+                        loader: 'file-loader',
+                        options: {
+                            name: '[path][name].[ext]',
+                        },
+                    },
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            mozjpeg: {
+                                progressive: true,
+                                quality: 65,
+                            },
+                            optipng: {
+                                enabled: true,
+                            },
+                            pngquant: {
+                                quality: [0.65, 0.90],
+                                speed: 4,
+                            },
+                            gifsicle: {
+                                interlaced: false,
+                            },
+                            webp: {
+                                quality: 75,
+                            },
+                        },
+                    },
+                ],
+            },
+        ],
+    },
 
     devServer: {
-    port: 3000,
+        port: 3000,
     },
 };
