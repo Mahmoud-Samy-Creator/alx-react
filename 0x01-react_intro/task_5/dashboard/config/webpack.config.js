@@ -1,55 +1,41 @@
 const path = require('path');
-const HTMLWebpackPlugin = require('html-webpack-plugin');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
-    mode: 'development',
-    entry: path.join(__dirname, '../src/index.js'),
-
+    entry: './src/index.js',
     output: {
-        path: path.join(__dirname, '../dist'),
-        filename: 'bundle.js'
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
     },
-
-    devtool: 'inline-source-map', // Enable inline source maps for easier debugging
-
-    plugins: [
-        new HTMLWebpackPlugin({
-            template: path.join(__dirname, '../dist/index.html')
-        })
-    ],
-
+    mode: 'development',
+    devtool: 'inline-source-map',
+    devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    hot: true,
+    },
     module: {
         rules: [
             {
-                test: /\.(js|jsx)$/,
-                exclude: /node_modules/,
-                use: {
-                    loader: 'babel-loader',
-                    options: {
-                        presets: ['@babel/preset-env', '@babel/preset-react']
-                    }
-                }
-            },
-            {
                 test: /\.css$/,
-                use: ['style-loader', 'css-loader'] // Handle CSS files
+                use: ['style-loader', 'css-loader'],
             },
             {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
-                type: 'asset/resource' // Handle image files
-            }
-        ]
-    },
-
-    resolve: {
-        extensions: ['*', '.js', '.jsx'],
-    },
-
-    devServer: {
-        contentBase: path.resolve(__dirname, '../dist'),
-        port: 8080,
-        hot: true,
-        open: true,
-        historyApiFallback: true
-    }
+                test: /\.(png|jpg|gif)$/i,
+                use: [
+                    {
+                        loader: 'image-webpack-loader',
+                        options: {
+                            bypassOnDebug: true,
+                            disable: true,
+                        },
+                    },
+                ],
+            },
+        ],
+},
+    plugins: [
+        new HtmlWebpackPlugin({
+            template: './src/index.html',
+        }),
+    ],
 };
