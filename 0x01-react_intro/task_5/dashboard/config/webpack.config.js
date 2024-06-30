@@ -8,6 +8,7 @@ module.exports = {
         path:path.resolve(__dirname, "../dist"),
         filename: "bundle.js"
     },
+
     mode: 'development',
 
     // inline source map
@@ -41,16 +42,19 @@ module.exports = {
                 use: [
                     'file-loader',
                     {
-                        //image webpack loader
-                    loader: 'image-webpack-loader',
-                    options: {
-                        bypassOnDebug: true, // webpack@1.x
-                        disable: true, // webpack@2.x and newer
+                        loader: 'image-webpack-loader',
+                        options: {
+                        bypassOnDebug: true,
+                        disable: true,
                     },
                     },
                 ],
             },
         ]
+    },
+
+    resolve: {
+        extensions: ['*', '.js', '.jsx'],
     },
 
     devServer: {
