@@ -1,1 +1,0 @@
-console.log("Hello words"),console.log("Adham");
