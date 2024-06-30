@@ -1,18 +1,22 @@
-const path = require('path');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
 
 module.exports = {
+    entry: '../src/index.js',
     entry: path.join(__dirname, "../src/index.js"),
 
     output: {
-        path:path.resolve(__dirname, "../dist"),
-        filename: "bundle.js"
+    filename: 'bundle.js',
+    path: path.resolve(__dirname, 'dist'),
+        path:path.resolve(__dirname, '../dist'),
+        filename: 'bundle.js'
     },
-
     mode: 'development',
 
-    // inline source map
     devtool: 'inline-source-map',
+    devServer: {
+    contentBase: path.join(__dirname, 'dist'),
+    hot: true,
+    },
 
     plugins: [
         new HtmlWebpackPlugin({
@@ -23,41 +27,43 @@ module.exports = {
     module: {
         rules: [
             {
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
                 test: /\.?js$/,
                 exclude: /node_modules/,
                 use: {
                     loader: "babel-loader",
                     options: {
-                    presets: ['@babel/preset-env', '@babel/preset-react']
+                        presets: ['@babel/preset-env', '@babel/preset-react']
                     }
-            }
+                }
             },
             {
-                test: /\.css$/,
-                // style loader & css loader
-                use: ['style-loader', 'css-loader'],
-            },
-            {
-                test: /\.(png|svg|jpg|jpeg|gif)$/i,
+                test: /\.(png|jpg|gif)$/i,
                 use: [
-                    'file-loader',
                     {
                         loader: 'image-webpack-loader',
                         options: {
-                        bypassOnDebug: true,
-                        disable: true,
-                    },
+                            bypassOnDebug: true,
+                            disable: true,
+                        },
                     },
                 ],
+                test: /\.css$/,
+                use: ['style-loader', 'css-loader'],
             },
-        ]
+        ],
     },
-
     resolve: {
-        extensions: ['*', '.js', '.jsx'],
-    },
+        extentions: ['.js', '.jsx']
+        },
 
     devServer: {
     port: 3000,
     },
+        plugins: [
+            new HtmlWebpackPlugin({
+                template: '../dist/index.html',
+            }),
+        ],
 };
