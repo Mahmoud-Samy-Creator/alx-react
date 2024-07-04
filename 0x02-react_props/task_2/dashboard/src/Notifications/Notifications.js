@@ -4,7 +4,7 @@ import closeIcon from './close-icon.png';
 import { getLatestNotification } from '../utils/utils';
 import NotificationItem from './NotificationItem';
 
-const Notifications = () => {
+export default function Notifications() {
 	return (
 		<div className='Notifications'>
 			<p style={{ display: 'inline', marginRight: '80%' }}>
@@ -24,5 +24,3 @@ const Notifications = () => {
 		</div>
 	);
 };
-
-export default Notifications;
