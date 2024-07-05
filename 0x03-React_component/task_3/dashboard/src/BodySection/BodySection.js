@@ -1,5 +1,4 @@
 import React, { Component } from 'react';
-// import PropTypes from' prop-types'
 import PropTypes from 'prop-types'
 
 class BodySection extends Component {
@@ -14,7 +13,7 @@ class BodySection extends Component {
         return(
             <div className='bodySection'>
                 <h2>{title}</h2>
-                <p>{children}</p>
+                <div>{children}</div>
             </div>
         );
     }
