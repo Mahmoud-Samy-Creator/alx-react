@@ -1,9 +1,9 @@
 # 0x03. React props
 
-📂 Specializations - Web Stack programming ― React
-👤 By Mahmoud Samy Elshora
-©️ Alx Software Engineering 12-month program
-🔖 Front-end | javascript | ES6 | React | React components | React props
+📂 Specializations - Web Stack programming ― React  
+👤 By Mahmoud Samy Elshora  
+©️ Alx Software Engineering 12-month program  
+🔖 Front-end | javascript | ES6 | React | React components | React props  
 
 ## Resources
 
