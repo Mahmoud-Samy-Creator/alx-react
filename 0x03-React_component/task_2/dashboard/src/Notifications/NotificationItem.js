@@ -3,6 +3,9 @@ import PropTypes from 'prop-types'
 
 
 class NotificationItem extends Component {
+    constructor(props) {
+        super(props);
+    }
     render() {
         const {type, html, value, markAsRead, id} = this.props;
         if (value) return <li data={type} onClick = {() => markAsRead(id)}>{value}</li>;
