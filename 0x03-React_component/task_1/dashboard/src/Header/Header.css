@@ -1,0 +1,20 @@
+.App-header {
+	font-size: var(--heading-font-size);
+	color: red;
+	display: flex;
+	align-items: center;
+	padding: var(--padding);
+	border-bottom: var(--border-bottom);
+	position: relative;
+}
+
+img {
+	width: 250px;
+	height: 250px;
+}
+
+h1 {
+	position: absolute;
+	bottom: 0;
+	left: 35%
+}
