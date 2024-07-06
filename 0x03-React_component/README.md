@@ -7,14 +7,14 @@
 
 ## Resources
 
-[React components](https://react.dev/reference/react/Component)
-[React Developer Tools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)
-[Enzyme Shallow](https://enzymejs.github.io/enzyme/docs/api/shallow.html)
-[Enzyme Mount](https://enzymejs.github.io/enzyme/docs/api/ReactWrapper/mount.html)
-[Enzyme Unmount](https://enzymejs.github.io/enzyme/docs/api/ReactWrapper/unmount.html)
-[React Pure components](https://react.dev/)
-[React Higher Order Components](https://react.dev/)
-[Jest mock function ](https://jestjs.io/docs/jest-object)
+[React components](https://react.dev/reference/react/Component)  
+[React Developer Tools](https://chromewebstore.google.com/detail/react-developer-tools/fmkadmapgofadopljbjfkapdkoienihi)  
+[Enzyme Shallow](https://enzymejs.github.io/enzyme/docs/api/shallow.html)  
+[Enzyme Mount](https://enzymejs.github.io/enzyme/docs/api/ReactWrapper/mount.html)  
+[Enzyme Unmount](https://enzymejs.github.io/enzyme/docs/api/ReactWrapper/unmount.html)  
+[React Pure components](https://react.dev/)  
+[React Higher Order Components](https://react.dev/)  
+[Jest mock function ](https://jestjs.io/docs/jest-object)  
   
 ## Learning Objectives
 
