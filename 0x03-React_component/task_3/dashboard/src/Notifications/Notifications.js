@@ -23,7 +23,7 @@ class Notifications extends Component {
 			notificationsExists = <NotificationItem type='default' value='No new notification for now'/>
 		} else {
 			notificationsExists = listNotifications.map(({ id, html, type, value }) =>
-				<NotificationItem key={id} type={type} value={value} html={html} markAsRead={this.markAsRead} />
+				<NotificationItem id = {id} key={id} type={type} value={value} html={html} markAsRead={this.markAsRead} />
 			)
 		}
 
