@@ -36,7 +36,7 @@ class Notifications extends Component {
 						type={type}
 						value={value}
 						html={html}
-						markAsRead={this.markAsRead(id)} />)
+						markAsRead={this.markAsRead} />)
 
 		if (displayDrawer) {
 			NotificationsDrawer = <div className='fragment'>
