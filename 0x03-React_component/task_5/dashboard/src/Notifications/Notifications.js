@@ -31,6 +31,7 @@ class Notifications extends Component {
 		: 
 		listNotifications.map(({ id, html, type, value }) =>
 			<NotificationItem
+						id = {id}
 						key={id}
 						type={type}
 						value={value}
