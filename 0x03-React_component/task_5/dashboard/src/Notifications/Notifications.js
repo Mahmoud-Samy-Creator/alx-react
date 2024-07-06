@@ -15,17 +15,27 @@ class Notifications extends Component {
 		console.log(`Notification ${id} has been marked as read`);
 	}
 
+	shouldComponentUpdate(nextProps) {
+		return (
+			nextProps.listNotifications.length > this.props.listNotifications.length
+		)
+	}
+
 	render() {
 		const { displayDrawer,  listNotifications} = this.props;
 		let NotificationsDrawer;
 		let notificationsExists;
-		if (!listNotifications.length) {
-			notificationsExists = <NotificationItem type='default' value='No new notification for now'/>
-		} else {
-			notificationsExists = listNotifications.map(({ id, html, type, value }) =>
-				<NotificationItem key={id} type={type} value={value} html={html} markAsRead={this.markAsRead(id)} />
-			)
-		}
+
+		notificationsExists = !listNotifications.length ?
+		<NotificationItem type='default' value='No new notification for now'/>
+		: 
+		listNotifications.map(({ id, html, type, value }) =>
+			<NotificationItem
+						key={id}
+						type={type}
+						value={value}
+						html={html}
+						markAsRead={this.markAsRead(id)} />)
 
 		if (displayDrawer) {
 			NotificationsDrawer = <div className='fragment'>
