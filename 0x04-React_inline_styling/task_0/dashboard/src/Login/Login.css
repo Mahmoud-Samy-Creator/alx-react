@@ -1,0 +1,16 @@
+.form-inputs,
+.input input {
+    font-size: var(--gen-font-size);
+}
+
+.form-inputs {
+	display: flex;
+	gap: 2em;
+	align-items: center;
+    justify-content: space-between;
+}
+
+.form-inputs .input input {
+	height: var(--gen-font-size);
+	margin-left: 10px;
+}

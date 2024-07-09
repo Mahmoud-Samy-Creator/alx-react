@@ -1,0 +1,19 @@
+.fragment {
+	width: fit-content;
+	position: absolute;
+	right: 5px;
+	z-index: 100;
+}
+.Notifications {
+	padding: 2em;
+	border: 2px dashed red;
+	height: 100px;
+}
+
+ul li[data='default'] {
+	color: blue;
+}
+
+ul li[data='urgent'] {
+	color: red;
+}
