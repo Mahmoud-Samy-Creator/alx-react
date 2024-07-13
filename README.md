@@ -3,7 +3,8 @@
 📂 Specializations - Web Stack programming ― React  
 👤 By Mahmoud Samy Elshora  
 ©️ Alx Software Engineering 12-month program  
-🔖 Front-end | javascript | ES6 | React | React components | React props  
+🔖 Front-end | javascript | ES6 | React | React components | React props   
+🔖 React Components | React inline Styling    
 
 
 [0x00. Webpack](https://github.com/Mahmoud-Samy-Creator/alx-react/tree/main/0x00-Webpack)  
@@ -12,3 +13,6 @@
 
 [0x02. React props](https://github.com/Mahmoud-Samy-Creator/alx-react/tree/main/0x02-react_props)
 
+[0x03-React_component](https://github.com/Mahmoud-Samy-Creator/alx-react/tree/main/0x03-React_component)  
+
+[0x04-React_inline_styling](0x04-React_inline_styling)  
