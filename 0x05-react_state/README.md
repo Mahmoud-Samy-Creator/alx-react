@@ -28,3 +28,9 @@ All your files will be interpreted/compiled on Ubuntu 18.04 LTS using `node 12.x
 Allowed editors: `vi`, `vim`, `emacs`, `Visual Studio Code`
 All your files should end with a new line
 A `README.md` file, at the root of the folder of the project, is mandatory
+
+[Task-0](https://github.com/Mahmoud-Samy-Creator/alx-react/tree/main/0x05-react_state/task_0/dashboard)
+[Task-1](https://github.com/Mahmoud-Samy-Creator/alx-react/tree/main/0x05-react_state/task_1/dashboard)
+[Task-2](https://github.com/Mahmoud-Samy-Creator/alx-react/tree/main/0x05-react_state/task_2/dashboard)
+[Task-3](https://github.com/Mahmoud-Samy-Creator/alx-react/tree/main/0x05-react_state/task_3/dashboard)
+[Task-4](https://github.com/Mahmoud-Samy-Creator/alx-react/tree/main/0x05-react_state/task_4/dashboard)
